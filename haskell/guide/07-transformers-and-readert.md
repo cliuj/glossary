@@ -187,6 +187,8 @@ Production codebases overwhelmingly converge on one specific stack — worth
 knowing as a *named architecture*, because you'll see it everywhere:
 
 ```haskell
+{-# LANGUAGE DerivingStrategies #-}
+
 data Env = Env                            -- ALL the app's dependencies, one record
   { config  :: Config
   , logger  :: Text -> IO ()              -- note: functions make great deps
